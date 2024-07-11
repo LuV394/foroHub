@@ -6,7 +6,7 @@
   </component>
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="true" />
+    <value-preview-text-wrapping value="false" />
     <value-preview-pinned value="false" />
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -17,19 +17,20 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="a95a834e-edb6-4446-8bbd-7c39c6e58a95">
-      <console name="Connection" type="STANDARD" schema="mysql" session="Main"><![CDATA[create database forohub]]></console>
+      <console name="Connection" type="STANDARD" schema="mysql" session="Main"><![CDATA[SELECT * FROM forohub;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="a95a834e-edb6-4446-8bbd-7c39c6e58a95" object-ref="consoles/Connection" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="a95a834e-edb6-4446-8bbd-7c39c6e58a95" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="a95a834e-edb6-4446-8bbd-7c39c6e58a95" dataset="forohub.topico" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
