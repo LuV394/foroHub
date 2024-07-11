@@ -62,5 +62,5 @@ Necesitarás una base de datos para almacenar la información de la aplicación.
 - **autor**: Autor del tópico.
 - **curso**: Curso relacionado con el tópico.
 
-¡Buena suerte y feliz codificación!
+
 
