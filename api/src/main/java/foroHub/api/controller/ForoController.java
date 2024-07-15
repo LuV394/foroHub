@@ -1,7 +1,6 @@
 package foroHub.api.controller;
 
 import foroHub.api.domain.topico.*;
-import foroHub.api.infra.errores.IdRequeridoException;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -36,14 +35,10 @@ public class ForoController {
         );
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<?> obtenerTopicoPorId(@PathVariable(required = false) Long id) {
-        if (id == null) {
-            throw new IdRequeridoException("ID es obligatorio para esta consulta");
-        }
-        Topico topico = topicoService.obtenerTopicoPorId(id);
-        DatosDetalleTopico detalleTopico = new DatosDetalleTopico(topico);
-        return ResponseEntity.ok().body(detalleTopico);
+    @PutMapping("/{id}")
+    public ResponseEntity<?> actualizarTopico(@PathVariable Long id, @Valid @RequestBody DatosActualizarTopico datosActualizarTopico) {
+        Topico topico = topicoService.actualizarTopico(id, datosActualizarTopico);
+        return ResponseEntity.ok().body(new DatosDetalleTopico(topico));
     }
 
     @DeleteMapping("/{id}")
@@ -52,9 +47,8 @@ public class ForoController {
         return ResponseEntity.ok().body(new DatosDetalleTopico(topico));
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<?> actualizarTopico(@PathVariable Long id, @Valid @RequestBody DatosActualizarTopico datosActualizarTopico) {
-        Topico topico = topicoService.actualizarTopico(id, datosActualizarTopico);
-        return ResponseEntity.ok().body(new DatosDetalleTopico(topico));
-    }
+
+
+
 }
+
